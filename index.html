@@ -133,8 +133,11 @@
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I am a passionate Artificial Intelligence and Data Science student.
-        Interested in Machine Learning, Materials Informatics, and Software Development.
+        I am an Artificial Intelligence and Data Science undergraduate passionate about solving real-world problems using technology and data-driven solutions. I have a strong foundation in programming, algorithms, operating systems, and core computer science concepts, along with hands-on experience in machine learning and data analysis.
+I enjoy building practical projects that combine software and hardware, including embedded systems and automation-based applications. My academic interests include machine learning, deep learning, data analytics, and intelligent system design.
+I am continuously learning and improving my skills in Python, data structures, database management systems, and AI-based model development. I believe in writing clean, efficient code and understanding the logic behind every solution I build.
+Currently, I am focused on strengthening my problem-solving skills, contributing to innovative projects, and exploring opportunities in Artificial Intelligence, Data Science, and software development.
+I am open to internships, collaborations, and networking opportunities in the AI & Data Science domain.
     </p>
 </section>
 
@@ -147,26 +150,108 @@
         </div>
 
         <div class="card">
-            <h3>Solar Energy Forecasting</h3>
-            <p>Machine Learning model for enhanced grid stability.</p>
+            <h3>Flappy Bird Game Development</h3>
+            <p>Developed a Flappy Bird game using java and swing.</p>
         </div>
 
         <div class="card">
             <h3>3D Domain Generalization</h3>
             <p>GNN based domain-invariant structural representation learning.</p>
         </div>
+
+        <div class="card">
+            <h3>Coordinated Dual-Arm Kinematics with Hybrid Differential Evolution</h3>
+            <p>Optimized dual-arm robotic coordination using hybrid evolutionary algorithms.</p>
+        </div>
+
+        <div class="card">
+            <h3>Bluetooth-Controlled Metal Detector Robot</h3>
+            <p>Designed and built a robot that detects metal using Bluetooth communication.</p>
+        </div>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: bhargavram11100@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/bhargav</p>
+<section id="contact" style="padding:60px 20px; background-color:#0f172a; text-align:center;">
+    <h2 style="font-size:32px; margin-bottom:10px;">Contact Me</h2>
+    <p style="color:gray; margin-bottom:30px;">
+        Feel free to reach out for collaborations, internships, or project discussions.
+    </p>
+
+    <div style="max-width:500px; margin:auto;">
+        <form id="contactForm">
+
+    <input type="text" id="name" placeholder="Your Name" required
+        style="width:100%; padding:12px; margin-bottom:15px; border-radius:5px; border:1px solid; background-color:#222426; color:rgb(220, 214, 214);">
+
+    <input type="email" id="email" placeholder="Your Email" required
+        style="width:100%; padding:12px; margin-bottom:15px; border-radius:5px; border:1px solid; background-color:#222426; color:rgb(220, 214, 214);">
+
+    <textarea id="message" placeholder="Your Message" rows="5" required
+        style="width:100%; padding:12px; margin-bottom:15px; border-radius:5px; border:1px solid; background-color:#222426; color:rgb(220, 214, 214);"></textarea>
+
+    <button type="submit" class="btn"
+        style="padding:12px 25px; background-color:#0A66C2; color:white; border:none; border-radius:5px; font-weight:bold; cursor:pointer;">
+        Send Message
+    </button>
+</form>
+
+        <div style="margin-top:25px;">
+            <p>Email: bhargavram11100@gmail.com</p>
+            <p>
+                <a href="https://www.linkedin.com/in/satya-siva-bhargav?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" style="color:#0A66C2; text-decoration:none;">
+                    LinkedIn Profile
+                </a>
+            </p>
+        </div>
+    </div>
 </section>
 
 <footer>
     <p>© 2026 Bhargav Ram | All Rights Reserved</p>
 </footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const status = document.getElementById("formStatus");
+    const button = document.getElementById("submitBtn");
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    button.disabled = true;
+    button.innerText = "Sending...";
+    status.innerText = "";
+
+    try {
+        const response = await fetch("http://localhost:5000/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, message })
+        });
+
+        const result = await response.json();
+
+        if(response.ok){
+            status.style.color = "lightgreen";
+            status.innerText = "Message sent successfully ✅";
+            document.getElementById("contactForm").reset();
+        } else {
+            status.style.color = "red";
+            status.innerText = "Failed to send message ❌";
+        }
+
+    } catch (error) {
+        status.style.color = "red";
+        status.innerText = "Server not reachable ❌";
+    }
+
+    button.disabled = false;
+    button.innerText = "Send Message";
+});
+</script>
 
 </body>
 </html>
