@@ -1,124 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Bhargav Ram | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Bhargav Ram | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
 
-        body {
-            background: #0f172a;
-            color: #ffffff;
-        }
+body {
+    background: #0f172a;
+    color: #ffffff;
+}
 
-        header {
-            padding: 20px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #1e293b;
-        }
+/* HEADER */
+header {
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+}
 
-        header h1 {
-            color: #38bdf8;
-        }
+header h1 {
+    color: #38bdf8;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+/* NAV */
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #38bdf8;
+    transition: 0.3s;
+}
 
-        .hero {
-            height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
+nav a:hover {
+    color: #38bdf8;
+}
 
-        .hero h2 {
-            font-size: 48px;
-        }
+nav a:hover::after {
+    width: 100%;
+}
 
-        .hero span {
-            color: #38bdf8;
-        }
+/* HERO */
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
 
-        .btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #38bdf8;
-            border: none;
-            color: black;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+.hero h2 {
+    font-size: 48px;
+    transition: 0.3s;
+}
 
-        section {
-            padding: 60px 10%;
-        }
+.hero h2:hover {
+    transform: scale(1.05);
+}
 
-        /* SKILLS */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+.hero span {
+    color: #38bdf8;
+}
 
-        .skill-category {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
-        }
+/* BUTTON */
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #38bdf8;
+    border: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
 
-        .skill-category h3 {
-            color: #38bdf8;
-            margin-bottom: 10px;
-        }
+.btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(56,189,248,0.4);
+}
 
-        /* PROJECTS */
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+/* SECTION */
+section {
+    padding: 60px 10%;
+}
 
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
-        }
+/* SKILLS */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-        /* CONTACT */
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #334155;
-            background-color: #1e293b;
-            color: white;
-        }
+.skill-category {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1e293b;
-        }
-    </style>
+.skill-category:hover {
+    transform: translateY(-8px) scale(1.03);
+    border: 1px solid #38bdf8;
+    box-shadow: 0 10px 25px rgba(56,189,248,0.2);
+}
+
+.skill-category h3 {
+    color: #38bdf8;
+}
+
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.04);
+    border: 1px solid #38bdf8;
+    box-shadow: 0 12px 30px rgba(56,189,248,0.3);
+}
+
+/* CONTACT */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background-color: #1e293b;
+    color: white;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 10px rgba(56,189,248,0.3);
+}
+
+/* LINKS */
+a {
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;
+}
+</style>
 </head>
 
 <body>
@@ -145,59 +213,29 @@
     <h2>About Me</h2>
     <p>
         AI & Data Science student passionate about solving real-world problems using machine learning,
-        deep learning, and data-driven solutions. Strong in programming, algorithms, and system design.
+        deep learning, and data-driven solutions.
     </p>
 </section>
 
 <section id="skills">
     <h2>Skills</h2>
     <div class="skills-container">
-        <div class="skill-category">
-            <h3>Programming</h3>
-            <p>Python, Java, C, SQL</p>
-        </div>
-        <div class="skill-category">
-            <h3>AI & Data Science</h3>
-            <p>Machine Learning, Deep Learning, Pandas, NumPy, Scikit-learn</p>
-        </div>
-        <div class="skill-category">
-            <h3>Web Development</h3>
-            <p>HTML, CSS, JavaScript</p>
-        </div>
-        <div class="skill-category">
-            <h3>Tools</h3>
-            <p>Git, GitHub, KNIME, Jupyter</p>
-        </div>
-        <div class="skill-category">
-            <h3>Core CS</h3>
-            <p>DSA, DBMS, OS</p>
-        </div>
+        <div class="skill-category"><h3>Programming</h3><p>Python, Java, C, SQL</p></div>
+        <div class="skill-category"><h3>AI & DS</h3><p>ML, DL, Pandas, NumPy</p></div>
+        <div class="skill-category"><h3>Web</h3><p>HTML, CSS, JS</p></div>
+        <div class="skill-category"><h3>Tools</h3><p>Git, GitHub</p></div>
+        <div class="skill-category"><h3>Core</h3><p>DSA, DBMS, OS</p></div>
     </div>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
-        <div class="card">
-            <h3>Smart Irrigation System</h3>
-            <p>IoT + ML based irrigation automation.</p>
-        </div>
-        <div class="card">
-            <h3>Flappy Bird Game</h3>
-            <p>Java Swing game development.</p>
-        </div>
-        <div class="card">
-            <h3>3D Domain Generalization</h3>
-            <p>GNN based representation learning.</p>
-        </div>
-        <div class="card">
-            <h3>Dual Arm Robotics</h3>
-            <p>Evolutionary optimization for robotics.</p>
-        </div>
-        <div class="card">
-            <h3>Metal Detector Robot</h3>
-            <p>Bluetooth controlled detection system.</p>
-        </div>
+        <div class="card"><h3>Smart Irrigation</h3><p>IoT + ML system</p></div>
+        <div class="card"><h3>Flappy Bird</h3><p>Java game</p></div>
+        <div class="card"><h3>3D GNN</h3><p>Domain generalization</p></div>
+        <div class="card"><h3>Dual Arm</h3><p>Robotics optimization</p></div>
+        <div class="card"><h3>Metal Robot</h3><p>Bluetooth control</p></div>
     </div>
 </section>
 
@@ -210,34 +248,15 @@
             <input type="email" id="email" placeholder="Your Email" required>
             <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
 
-            <button type="submit" id="submitBtn" class="btn">
-                Send Message
-            </button>
+            <button type="submit" id="submitBtn" class="btn">Send Message</button>
         </form>
 
         <p id="formStatus"></p>
 
         <div style="margin-top:30px;">
-            <p>
-                📧 
-                <a href="mailto:bhargavram11100@gmail.com" style="color:#38bdf8;">
-                    bhargavram11100@gmail.com
-                </a>
-            </p>
-
-            <p>
-                🔗 
-                <a href="https://www.linkedin.com/in/satya-siva-bhargav" target="_blank" style="color:#38bdf8;">
-                    LinkedIn
-                </a>
-            </p>
-
-            <p>
-                📸 
-                <a href="https://instagram.com/YOUR_USERNAME" target="_blank" style="color:#38bdf8;">
-                    Instagram
-                </a>
-            </p>
+            <p>📧 <a href="mailto:bhargavram11100@gmail.com" style="color:#38bdf8;">Email</a></p>
+            <p>🔗 <a href="https://www.linkedin.com/in/satya-siva-bhargav" target="_blank" style="color:#38bdf8;">LinkedIn</a></p>
+            <p>📸 <a href="https://instagram.com/YOUR_USERNAME" target="_blank" style="color:#38bdf8;">Instagram</a></p>
         </div>
     </div>
 </section>
@@ -247,6 +266,7 @@
 </footer>
 
 <script>
+/* FORM */
 document.getElementById("contactForm").addEventListener("submit", async function(e) {
     e.preventDefault();
 
@@ -267,11 +287,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
             })
         });
 
-        if(response.ok){
-            status.innerText = "Message sent ✅";
-        } else {
-            status.innerText = "Failed ❌";
-        }
+        status.innerText = response.ok ? "Message sent ✅" : "Failed ❌";
 
     } catch {
         status.innerText = "Server error ❌";
@@ -279,6 +295,25 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
     button.disabled = false;
     button.innerText = "Send Message";
+});
+
+/* FADE-IN ANIMATION */
+const elements = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+}, { threshold: 0.2 });
+
+elements.forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = "translateY(40px)";
+    el.style.transition = "all 0.6s ease";
+    observer.observe(el);
 });
 </script>
 
