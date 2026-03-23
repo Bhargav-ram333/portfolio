@@ -186,6 +186,20 @@ footer {
     padding: 20px;
     background: #1e293b;
 }
+    .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #38bdf8;
+    transition: 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(56,189,248,0.4);
+}
 </style>
 </head>
 
@@ -202,6 +216,7 @@ footer {
 </header>
 
 <div class="hero">
+    <img src="profile.jpg" alt="Bhargav Ram" class="profile-img">
     <h2>Hello, I'm <span>Bhargav Ram</span></h2>
     <p>AI & Data Science Student | Developer | Research Enthusiast</p>
     <a href="https://drive.google.com/file/d/1fygjwlhIaDZcfhy0jLW9POerKUgl3Bw5/view?usp=share_link" target="_blank">
