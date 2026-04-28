@@ -200,6 +200,24 @@ footer {
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(56,189,248,0.4);
 }
+
+    .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 5px 10px rgba(56,189,248,0.6));
+}
 </style>
 </head>
 
@@ -268,11 +286,19 @@ footer {
 
         <p id="formStatus"></p>
 
-        <div style="margin-top:30px;">
-            <p>📧 <a href="mailto:bhargavram11100@gmail.com" style="color:#38bdf8;">Email</a></p>
-            <p>🔗 <a href="https://www.linkedin.com/in/satya-siva-bhargav?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" style="color:#38bdf8;">LinkedIn</a></p>
-            <p>📸 <a href="https://instagram.com/bhargav_ram_07" target="_blank" style="color:#38bdf8;">Instagram</a></p>
-        </div>
+       <div class="social-links">
+    <a href="mailto:bhargavram11100@gmail.com">
+        <img src="732200.png" alt="Email">
+    </a>
+
+    <a href="https://www.linkedin.com/in/satya-siva-bhargav" target="_blank">
+        <img src="174857.png" alt="LinkedIn">
+    </a>
+
+    <a href="https://instagram.com/bhargav_ram_07" target="_blank">
+        <img src="2111463.png" alt="Instagram">
+    </a>
+</div>
     </div>
 </section>
 
@@ -302,10 +328,10 @@ document.getElementById("contactForm").addEventListener("submit", async function
             })
         });
 
-        status.innerText = response.ok ? "Message sent ✅" : "Failed ❌";
+        status.innerText = response.ok ? "Message sent " : "Failed ";
 
     } catch {
-        status.innerText = "Server error ❌";
+        status.innerText = "Server error ";
     }
 
     button.disabled = false;
