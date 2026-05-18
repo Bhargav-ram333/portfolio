@@ -1,315 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<title>Bhargav Ram | Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bhargav Ram | Portfolio</title>
 
 <style>
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,sans-serif;
-  scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-  background:linear-gradient(135deg,#f8fafc,#eef2ff,#f0fdf4);
-  color:#1e293b;
+    background:linear-gradient(135deg,#f8fafc,#eef2ff,#f0fdf4);
+    min-height:100vh;
+    color:#1e293b;
 }
 
 /* HEADER */
 
 header{
-  padding:16px 10%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(255,255,255,0.85);
-  backdrop-filter:blur(10px);
-  box-shadow:0 2px 12px rgba(99,102,241,0.08);
-  position:sticky;
-  top:0;
-  z-index:100;
+    width:100%;
+    padding:18px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.8);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 2px 12px rgba(99,102,241,0.08);
 }
 
 header h1{
-  color:#6366f1;
+    color:#6366f1;
+    font-size:28px;
 }
 
 nav a{
-  position:relative;
-  color:#1e293b;
-  text-decoration:none;
-  margin-left:20px;
-  transition:0.3s;
-  font-weight:500;
-}
-
-nav a::after{
-  content:"";
-  position:absolute;
-  width:0%;
-  height:2px;
-  left:0;
-  bottom:-5px;
-  background:#6366f1;
-  transition:0.3s;
+    text-decoration:none;
+    margin-left:22px;
+    color:#1e293b;
+    font-weight:600;
+    position:relative;
+    transition:0.3s;
 }
 
 nav a:hover{
-  color:#6366f1;
+    color:#6366f1;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:#6366f1;
+    left:0;
+    bottom:-6px;
+    transition:0.3s;
 }
 
 nav a:hover::after{
-  width:100%;
+    width:100%;
 }
 
 /* HERO */
 
 .hero{
-  min-height:60vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  text-align:center;
-  padding:30px 10%;
+    min-height:55vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 10%;
 }
 
 .hero h2{
-  font-size:44px;
-  color:#1e293b;
-  transition:0.3s;
+    font-size:48px;
+    margin-bottom:10px;
+    color:#1e293b;
 }
 
-.hero h2:hover{
-  transform:scale(1.05);
-}
-
-.hero span{
-  color:#6366f1;
+.hero h2 span{
+    color:#6366f1;
 }
 
 .hero p{
-  color:#475569;
-  margin-top:8px;
-  font-size:17px;
+    color:#475569;
+    font-size:18px;
+    margin-bottom:20px;
 }
 
 /* BUTTON */
 
 .btn{
-  margin-top:16px;
-  padding:11px 24px;
-  background:#6366f1;
-  border:none;
-  color:white;
-  cursor:pointer;
-  border-radius:8px;
-  font-weight:bold;
-  font-size:15px;
-  transition:all 0.3s ease;
-  display:inline-block;
-  text-decoration:none;
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    background:#6366f1;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
 }
 
 .btn:hover{
-  background:#4f46e5;
-  transform:translateY(-3px) scale(1.05);
-  box-shadow:0 8px 20px rgba(99,102,241,0.25);
+    background:#4f46e5;
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(99,102,241,0.25);
 }
 
 /* SECTIONS */
 
 section{
-  padding:40px 10%;
-  margin:30px auto;
-  width:90%;
-  max-width:1100px;
-  background:rgba(255,255,255,0.7);
-  backdrop-filter:blur(8px);
-  border-radius:18px;
-  box-shadow:0 4px 20px rgba(99,102,241,0.08);
-  display:none;
-  animation:fadeIn 0.5s ease;
+    display:none;
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 30px rgba(99,102,241,0.08);
+    animation:fadeIn 0.5s ease;
 }
 
 section.active{
-  display:block;
+    display:block;
 }
 
 section h2{
-  font-size:26px;
-  margin-bottom:20px;
-  color:#1e293b;
-  border-left:4px solid #6366f1;
-  padding-left:12px;
+    margin-bottom:20px;
+    font-size:28px;
+    color:#1e293b;
+    border-left:5px solid #6366f1;
+    padding-left:12px;
 }
 
 /* ABOUT */
 
 #about p{
-  color:#475569;
-  font-size:15px;
-  line-height:1.75;
-  max-width:700px;
+    line-height:1.8;
+    color:#475569;
+    font-size:16px;
 }
 
 /* SKILLS */
 
 .skills-container{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:12px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px;
 }
 
-.skill-category{
-  background:#ffffff;
-  padding:16px 18px;
-  border-radius:10px;
-  transition:all 0.3s ease;
-  border:1.5px solid #e2e8f0;
+.skill-card{
+    background:white;
+    padding:18px;
+    border-radius:14px;
+    border:1px solid #e2e8f0;
+    transition:0.3s;
 }
 
-.skill-category:hover{
-  transform:translateY(-6px);
-  border-color:#6366f1;
-  box-shadow:0 8px 20px rgba(99,102,241,0.15);
+.skill-card:hover{
+    transform:translateY(-6px);
+    border-color:#6366f1;
+    box-shadow:0 10px 20px rgba(99,102,241,0.15);
 }
 
-.skill-category h3{
-  color:#6366f1;
-  margin-bottom:5px;
-  font-size:15px;
+.skill-card h3{
+    color:#6366f1;
+    margin-bottom:6px;
 }
 
-.skill-category p{
-  color:#475569;
-  font-size:13px;
+.skill-card p{
+    color:#64748b;
+    font-size:14px;
 }
 
 /* PROJECTS */
 
 .projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:14px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
 }
 
-.card{
-  background:#ffffff;
-  padding:18px 20px;
-  border-radius:12px;
-  transition:all 0.3s ease;
-  border:1.5px solid #e2e8f0;
+.project-card{
+    background:white;
+    padding:20px;
+    border-radius:16px;
+    border:1px solid #e2e8f0;
+    transition:0.3s;
 }
 
-.card:hover{
-  transform:translateY(-8px);
-  border-color:#6366f1;
-  box-shadow:0 12px 25px rgba(99,102,241,0.18);
+.project-card:hover{
+    transform:translateY(-8px);
+    border-color:#6366f1;
+    box-shadow:0 12px 24px rgba(99,102,241,0.18);
 }
 
-.card h3{
-  color:#1e293b;
-  margin-bottom:4px;
+.project-card h3{
+    margin-bottom:8px;
+    color:#1e293b;
 }
 
-.card p{
-  color:#64748b;
-  font-size:13px;
+.project-card p{
+    color:#64748b;
+    font-size:14px;
 }
 
 .project-link{
-  text-decoration:none;
-  color:inherit;
+    text-decoration:none;
 }
 
-/* INPUTS */
+/* CONTACT */
+
+form{
+    margin-top:20px;
+}
 
 input,textarea{
-  width:100%;
-  padding:10px 12px;
-  margin-bottom:12px;
-  border-radius:8px;
-  border:1.5px solid #cbd5e1;
-  background:#fff;
-  color:#1e293b;
-  transition:0.3s;
+    width:100%;
+    padding:12px;
+    margin-bottom:14px;
+    border-radius:10px;
+    border:1px solid #cbd5e1;
+    font-size:14px;
+    transition:0.3s;
 }
 
-input:focus,textarea:focus{
-  outline:none;
-  border-color:#6366f1;
-  box-shadow:0 0 0 3px rgba(99,102,241,0.15);
-}
-
-/* PROFILE */
-
-.profile-img{
-  width:130px;
-  height:130px;
-  border-radius:50%;
-  object-fit:cover;
-  margin-bottom:14px;
-  border:4px solid #6366f1;
-  transition:0.3s;
-}
-
-.profile-img:hover{
-  transform:scale(1.05);
-  box-shadow:0 8px 25px rgba(99,102,241,0.35);
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:#6366f1;
+    box-shadow:0 0 0 3px rgba(99,102,241,0.15);
 }
 
 /* SOCIAL */
 
 .social-links{
-  display:flex;
-  justify-content:center;
-  gap:22px;
-  margin-top:18px;
+    margin-top:18px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
 }
 
-.social-links img{
-  width:36px;
-  height:36px;
-  transition:0.3s ease;
+.social-links a{
+    text-decoration:none;
+    color:#6366f1;
+    font-weight:bold;
+    transition:0.3s;
 }
 
-.social-links img:hover{
-  transform:scale(1.2);
-}
-
-/* CONTACT */
-
-#contact{
-  text-align:center;
+.social-links a:hover{
+    color:#4f46e5;
 }
 
 /* FOOTER */
 
 footer{
-  text-align:center;
-  padding:18px;
-  background:#1e293b;
-  color:#cbd5e1;
-  margin-top:30px;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    background:#1e293b;
+    color:#cbd5e1;
 }
 
 /* ANIMATION */
 
 @keyframes fadeIn{
-  from{
-    opacity:0;
-    transform:translateY(20px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 </style>
@@ -317,36 +298,38 @@ footer{
 
 <body>
 
-<header>
-  <h1>Bhargav</h1>
+<!-- HEADER -->
 
-  <nav>
-    <a href="#" onclick="showSection('about')">About</a>
-    <a href="#" onclick="showSection('skills')">Skills</a>
-    <a href="#" onclick="showSection('projects')">Projects</a>
-    <a href="#" onclick="showSection('contact')">Contact</a>
-  </nav>
+<header>
+
+<h1>Bhargav</h1>
+
+<nav>
+<a href="#" onclick="showSection('about')">About</a>
+<a href="#" onclick="showSection('skills')">Skills</a>
+<a href="#" onclick="showSection('projects')">Projects</a>
+<a href="#" onclick="showSection('contact')">Contact</a>
+</nav>
+
 </header>
 
 <!-- HERO -->
 
 <div class="hero">
 
-  <img src="profile.jpg" alt="Bhargav Ram" class="profile-img">
+<h2>Hello, I'm <span>Bhargav Ram</span></h2>
 
-  <h2>Hello, I'm <span>Bhargav Ram</span></h2>
+<p>
+AI & Data Science Student | Developer | Research Enthusiast
+</p>
 
-  <p>
-    AI & Data Science Student | Developer | Research Enthusiast
-  </p>
+<a href="https://drive.google.com/file/d/1fygjwlhIaDZcfhy0jLW9POerKUgl3Bw5/view?usp=share_link" target="_blank">
 
-  <a href="https://drive.google.com/file/d/1fygjwlhIaDZcfhy0jLW9POerKUgl3Bw5/view?usp=share_link" target="_blank">
+<button class="btn">
+Download Resume
+</button>
 
-    <button class="btn">
-      Download Resume
-    </button>
-
-  </a>
+</a>
 
 </div>
 
@@ -354,12 +337,13 @@ footer{
 
 <section id="about">
 
-  <h2>About Me</h2>
+<h2>About Me</h2>
 
-  <p>
-    AI & Data Science student passionate about solving real-world problems using
-    machine learning, deep learning, and data-driven solutions.
-  </p>
+<p>
+AI & Data Science student passionate about solving real-world problems using machine learning,
+deep learning, and intelligent data-driven solutions.
+Interested in AI research, robotics, domain generalization, and full-stack development.
+</p>
 
 </section>
 
@@ -367,36 +351,36 @@ footer{
 
 <section id="skills">
 
-  <h2>Skills</h2>
+<h2>Skills</h2>
 
-  <div class="skills-container">
+<div class="skills-container">
 
-    <div class="skill-category">
-      <h3>Programming</h3>
-      <p>Python, Java, C, SQL</p>
-    </div>
+<div class="skill-card">
+<h3>Programming</h3>
+<p>Python, Java, C, SQL</p>
+</div>
 
-    <div class="skill-category">
-      <h3>AI & DS</h3>
-      <p>ML, DL, Pandas, NumPy</p>
-    </div>
+<div class="skill-card">
+<h3>AI & DS</h3>
+<p>Machine Learning, Deep Learning, NumPy, Pandas</p>
+</div>
 
-    <div class="skill-category">
-      <h3>Web</h3>
-      <p>HTML, CSS, JS</p>
-    </div>
+<div class="skill-card">
+<h3>Web</h3>
+<p>HTML, CSS, JavaScript</p>
+</div>
 
-    <div class="skill-category">
-      <h3>Tools</h3>
-      <p>Git, GitHub</p>
-    </div>
+<div class="skill-card">
+<h3>Tools</h3>
+<p>Git, GitHub, VS Code</p>
+</div>
 
-    <div class="skill-category">
-      <h3>Core</h3>
-      <p>DSA, DBMS, OS</p>
-    </div>
+<div class="skill-card">
+<h3>Core</h3>
+<p>DBMS, DSA, Operating Systems</p>
+</div>
 
-  </div>
+</div>
 
 </section>
 
@@ -404,46 +388,56 @@ footer{
 
 <section id="projects">
 
-  <h2>Projects</h2>
+<h2>Projects</h2>
 
-  <div class="projects">
+<div class="projects">
 
-    <a href="https://github.com/Bhargav-ram333" target="_blank" class="project-link">
-      <div class="card">
-        <h3>Smart Irrigation</h3>
-        <p>IoT + ML system</p>
-      </div>
-    </a>
+<a href="https://github.com/Bhargav-ram333" target="_blank" class="project-link">
 
-    <a href="https://github.com/Bhargav-ram333" target="_blank" class="project-link">
-      <div class="card">
-        <h3>Flappy Bird</h3>
-        <p>Java game</p>
-      </div>
-    </a>
+<div class="project-card">
+<h3>Smart Irrigation</h3>
+<p>IoT + ML based intelligent irrigation system.</p>
+</div>
 
-    <a href="https://github.com/Bhargav-ram333" target="_blank" class="project-link">
-      <div class="card">
-        <h3>3D GNN</h3>
-        <p>Domain generalization</p>
-      </div>
-    </a>
+</a>
 
-    <a href="https://github.com/Bhargav-ram333" target="_blank" class="project-link">
-      <div class="card">
-        <h3>Dual Arm</h3>
-        <p>Robotics optimization</p>
-      </div>
-    </a>
+<a href="https://github.com/Bhargav-ram333" target="_blank" class="project-link">
 
-    <a href="https://github.com/Bhargav-ram333" target="_blank" class="project-link">
-      <div class="card">
-        <h3>Metal Robot</h3>
-        <p>Bluetooth control</p>
-      </div>
-    </a>
+<div class="project-card">
+<h3>Flappy Bird</h3>
+<p>Java game with GUI implementation.</p>
+</div>
 
-  </div>
+</a>
+
+<a href="https://github.com/Bhargav-ram333" target="_blank" class="project-link">
+
+<div class="project-card">
+<h3>3D GNN</h3>
+<p>Point cloud domain generalization using GNN.</p>
+</div>
+
+</a>
+
+<a href="https://github.com/Bhargav-ram333" target="_blank" class="project-link">
+
+<div class="project-card">
+<h3>Dual Arm Robot</h3>
+<p>Robotics optimization and control project.</p>
+</div>
+
+</a>
+
+<a href="https://github.com/Bhargav-ram333" target="_blank" class="project-link">
+
+<div class="project-card">
+<h3>Metal Detecting Robot</h3>
+<p>Bluetooth controlled Arduino robot.</p>
+</div>
+
+</a>
+
+</div>
 
 </section>
 
@@ -451,113 +445,117 @@ footer{
 
 <section id="contact">
 
-  <h2>Contact Me</h2>
+<h2>Contact Me</h2>
 
-  <div style="max-width:480px;margin:20px auto 0">
+<form id="contactForm">
 
-    <form id="contactForm">
+<input type="text" id="name" placeholder="Your Name" required>
 
-      <input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
 
-      <input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" rows="5" placeholder="Your Message" required></textarea>
 
-      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+<button type="submit" class="btn" id="submitBtn">
+Send Message
+</button>
 
-      <button type="submit" id="submitBtn" class="btn" style="width:100%">
-        Send Message
-      </button>
+</form>
 
-    </form>
+<p id="formStatus" style="margin-top:12px;color:#6366f1;font-weight:bold;"></p>
 
-    <p id="formStatus" style="margin-top:10px;color:#6366f1;font-weight:500"></p>
+<div class="social-links">
 
-    <div class="social-links">
+<a href="mailto:bhargavram11100@gmail.com">Email</a>
 
-      <a href="mailto:bhargavram11100@gmail.com">
-        <img src="732200.png" alt="Email">
-      </a>
+<a href="https://www.linkedin.com/in/satya-siva-bhargav" target="_blank">
+LinkedIn
+</a>
 
-      <a href="https://www.linkedin.com/in/satya-siva-bhargav" target="_blank">
-        <img src="174857.png" alt="LinkedIn">
-      </a>
+<a href="https://instagram.com/bhargav_ram_07" target="_blank">
+Instagram
+</a>
 
-      <a href="https://instagram.com/bhargav_ram_07" target="_blank">
-        <img src="2111463.png" alt="Instagram">
-      </a>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 <!-- FOOTER -->
 
 <footer>
-  <p>© 2026 Bhargav Ram</p>
+
+<p>© 2026 Bhargav Ram</p>
+
 </footer>
 
 <script>
 
-/* SHOW ONLY SELECTED SECTION */
+/* SHOW SELECTED SECTION ONLY */
 
 function showSection(id){
 
-  const sections=document.querySelectorAll("section");
+    const sections=document.querySelectorAll("section");
 
-  sections.forEach(section=>{
-    section.classList.remove("active");
-  });
+    sections.forEach(section=>{
+        section.classList.remove("active");
+        section.style.display="none";
+    });
 
-  document.getElementById(id).classList.add("active");
+    const selected=document.getElementById(id);
 
+    selected.style.display="block";
+    selected.classList.add("active");
+
+    selected.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
 }
 
-/* SHOW ABOUT SECTION FIRST */
+/* DEFAULT SECTION */
 
 window.onload=()=>{
-  showSection("about");
+    showSection("about");
 };
 
 /* CONTACT FORM */
 
 document.getElementById("contactForm").addEventListener("submit",async function(e){
 
-  e.preventDefault();
+    e.preventDefault();
 
-  const status=document.getElementById("formStatus");
+    const status=document.getElementById("formStatus");
 
-  const button=document.getElementById("submitBtn");
+    const button=document.getElementById("submitBtn");
 
-  button.disabled=true;
+    button.disabled=true;
 
-  button.innerText="Sending...";
+    button.innerText="Sending...";
 
-  try{
+    try{
 
-    const r=await fetch("http://localhost:5000/contact",{
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify({
-        name:name.value,
-        email:email.value,
-        message:message.value
-      })
-    });
+        const r=await fetch("http://localhost:5000/contact",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                name:name.value,
+                email:email.value,
+                message:message.value
+            })
+        });
 
-    status.innerText=r.ok ? "Message sent ✓" : "Failed ✗";
+        status.innerText=r.ok ? "Message sent ✓" : "Failed ✗";
 
-  }catch{
+    }catch{
 
-    status.innerText="Server error ✗";
+        status.innerText="Server error ✗";
 
-  }
+    }
 
-  button.disabled=false;
+    button.disabled=false;
 
-  button.innerText="Send Message";
+    button.innerText="Send Message";
 
 });
 
